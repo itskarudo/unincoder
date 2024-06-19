@@ -103,9 +103,13 @@ character_map = {
     " ": "　",
 }
 
-buf = ""
+if len(sys.argv) != 2:
+    print(f"Usage: {sys.argv[0]} <string>")
+    sys.exit(1)
 
 arg = sys.argv[1]
+
+buf = ""
 for c in arg:
     if c in character_map:
         buf += character_map[c]
