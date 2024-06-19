@@ -111,5 +111,6 @@ for c in arg:
         buf += character_map[c]
     else:
         print(f"Unsupported character: {c} ({hex(ord(c))})")
+        sys.exit(1)
 
 print(buf)
